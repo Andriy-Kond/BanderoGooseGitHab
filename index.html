@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бандерогусак</title>
+    <!-- шрифти з font.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- reset.css обнуляє стилі всіх браузерів за замовчуванням -->
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/Styles.css">
+
+    <!-- робимо попереднє завантаження анімації гуся, щоби юзер не чекав -->
+    <link rel="preload" href="/img/gus-anim.gif" as="image" >
+
+</head>
+
+
+<body>
+<section class="main-page">
+<div class="wrapper">
+
+<header>
+<img src="/img/logo.svg" alt="logo must be here">
+<p class="logo-text">
+Школа підготовки <br>
+IT-спеціалістів
+</p>
+</header>
+
+<div class="main-page-row">
+<div class="goose-container">
+<h3 class="cont-h3">Доброго вечора, ми з України</h3>
+<h2 class="cont-h2">На старт. Увага. Полетіли!</h2>
+<h1 class="cont-h1">Бандерогусак</h1>
+
+<p  class="cont-p">Спеціальний бойовий гусак із біолабораторій України. Пишаюся своїми подвигами, бороню Батьківщину та підтримую
+позитивний дух народу. Слава Україні!
+</p>
+
+<button class="goose-go" id="open-form-modal-btn">
+Запустити гусака
+</button>                        
+</div>
+<img src="/img/gus.svg" alt="тут має бути світлина гусака" class="goose-img">
+</div>
+
+</div>
+    </section>  
+    
+    <section class="goose-facts">
+        <img src="/img/trezub.svg" alt="logo trizuba" class="trizub">
+
+        <h4 class="goose-title">
+            Цікаві факти про бандерогусаків
+        </h4>
+        
+        <P class="goose-description">
+            Зазвичай бандерогусаки — виключно мирні птахи. Але у разі небезпеки можуть атакувати ворога системою надпотужного
+            озброєння. Також нищать психологічно, активуючи високочастотне шипіння та розмахування крилами.
+        </P>
+
+        <!-- загальний контейнер для трьох фактів -->
+        <div class="goose-facts-container">
+            <div class="goose-fact">
+                <img src="/img/gus1.svg" alt="img Gus1" class="goose-fact-img">
+                <h5 class="goose-fact-title">Система навігації</h5>
+                <p class="goose-fact-description">Супутниковий GPS та ехолокатори розпізнають ворожу техніку навіть на етапі збірки</p>
+            </div>
+
+            <div class="goose-fact">
+                <img src="/img/gus2.svg" alt="img Gus2" class="goose-fact-img">
+                <h5 class="goose-fact-title">Очі-тепловізори</h5>
+                <p class="goose-fact-description">Допомагають виявити характер сигнатури об’єктів та значно підвищують точність удару</p>
+            </div>
+
+            <div class="gobuttonose-fact">
+                <img src="/img/gus3.svg" alt="img Gus3" class="goose-fact-img">
+                <h5 class="goose-fact-title">Байракрила</h5>
+                <p class="goose-fact-description">Можуть нести 2-4 керовані ракети, що вражають ціль на відстані «ніхріна собі» кілометрів</p>
+            </div>
+
+
+        </div>
+
+       
+
+    </section>
+
+    <footer class="victory-footer">
+        <div class="victory-bgd">
+            <img src="/img/trezub.svg" alt="Trizub must be here" class="urk-logo">
+            <h5 class="victory-title">Перемога завжди за нами!</h5>
+            <p class="victory-description">Головна мета бандерогусаків — служити 
+            гумору та доброті нашого народу. Ми забезпечимо вашу посмішку у часи, 
+            коли вона так необхідна</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно #1 (modal-brd - загальний чорний фон) -->
+    <div class="modal-brd" id="form-modal">
+        <!-- form - білий квадрат -->
+        <div class="modal-form-container">
+            <button class="close-btn">X</button>
+            <form action="#" class="modal-form" data-netlify="true" id="form">
+                
+                <img src="/img/trezub.svg" alt="trizub mast be here"/>
+                
+                <h5 class="modal-form-title">Поділися, будь ласка, поштою</h5>
+                <p class="modal-form-description">та запиши гусака до бандерозагону</p>
+
+
+                <div class="modal-form-field">
+                    <label for="user-name" class="modal-field-name">Ім'я</label>
+                    <input type="text" class="modal-field-input" id="user-name" name="Ім'я" />
+                </div>
+
+                <div class="modal-form-field">
+                    <label for="user-email" class="modal-field-name">Email</label>
+                    <input type="email" class="modal-field-input" id="user-email" name="Email"/>
+                </div>
+
+                <button class="modal-form-button" id="launch-btn">
+                    Запустити гусака
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Модальне вікно #2 (modal-brd - загальний чорний фон) -->
+    <div class="modal-brd" id="success-modal">
+        <!-- form - білий квадрат -->
+        <div class="modal-form modal-form-container">
+            <!-- <button class="close-button">X</button> -->
+            <img src="/img/trezub.svg" alt="trizub mast be here">
+    
+            <h5 class="modal-form-title">Підтверджуємо вдалий
+                запуск Гусака! <br> Слава Україні!</h5>
+    
+            <button class="modal-form-button">Героям Слава!</button>
+    
+        </div>
+    
+    </div>
+
+    <script src="/Scripts/form.js"></script>
+</body>
+
+</html>

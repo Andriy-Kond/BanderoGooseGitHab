@@ -1,0 +1,311 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+
+}
+
+.main-page {
+    background: linear-gradient(270deg, #A5DEFF 0%, #FCFEFF 100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    margin-top: 34px;
+    margin-bottom: 58px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-text {
+    margin-left: 18px;
+    {
+        
+    }
+}
+
+.main-page-row {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.goose-container {
+    background: #FFFFFF;
+    padding: 60px 56px;
+    align-self: center;
+}
+
+.cont-h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin-bottom: 16px;
+}
+
+.cont-h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px; 
+    color: #FF6B0A;
+    margin-bottom: 48px;
+}
+
+.cont-h1 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    color: #1B1D1F;
+}
+
+.cont-p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+
+.goose-go {
+    background: #FF6B0A;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.goose-img {
+    align-self: flex-end;
+}
+
+/* Секція другої сторінки */
+.goose-facts {
+    padding: 52px 0px 72px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.goose-title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100px;
+    color: #1B1D1F;
+    margin: 16px auto;
+}
+.goose-description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1B1D1F;
+    width: 875px;    
+}
+
+.goose-facts-container {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;    
+}
+.goose-fact {
+    width: 33%;
+}
+.goose-fact-img {
+
+}
+.goose-fact-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FF6B0A;
+    margin: 12px 0px 32px 0px;
+}
+.goose-fact-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;    
+    color: #1B1D1F;
+    width: 280px;
+}
+
+/* Footer section */
+.victory-footer {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 72px; */
+}
+
+.victory-bgd {
+    background: linear-gradient(270deg, #DFF3FF 0%, #FFFFFF 100%);
+    width: 1170px;
+    padding: 72px 0px;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-bottom: 72px;
+    /* чому "margin-bottom: 72px;" спрацьовує саме тут, а у .victory-footer - ні?
+    Чому "display: flex;" і "justify-content: center;" у футері праюють, а тут ні?
+    Нічого не зрозуміло. Просто виконую, як на відео.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.urk-logo {
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.victory-title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100px;    
+    color: #1B1D1F;
+    margin: 16px 0px;
+}
+
+.victory-description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1B1D1F;
+    width: 915px;
+    text-align: center;
+}
+
+/* Модальне вікно #1 */
+.modal-brd {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgb(27 29 31 / 70%);
+    display: flex;
+    /* центрування по вертикалі */
+    align-items: center; 
+    /* центрування по горизонталі */
+    justify-content: center;
+
+    /* якщо немає класу .modal-active, то значення будуть такі: */
+    opacity: 0;
+    pointer-events: none;
+    
+    /* додаємо анімацію */
+    transition: all 0.3s ease-in-out;
+
+}
+.modal-form { 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.modal-form-container {
+    background: #FFFFFF;
+    padding: 32px 92px 60px 92px;
+    position: relative;
+
+}
+
+.close-btn {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    background: white;
+    font-size: 20px;
+    color: #1B1D1F;
+    cursor: pointer;
+}
+
+.modal-form-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin: 32px 0px 12px 0px;
+    text-align: center;
+}
+.modal-form-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;    
+    color: #1B1D1F;
+    margin-bottom: 24px;
+}
+.modal-form-field {
+    width: 100%;
+    /* чому не спрацьовує "flex-direction: column;"? 
+    Ім'я має бути над полем, а в мене - в строку */
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 16px;
+}
+.modal-field-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin-bottom: 8px;
+}
+.modal-field-input {
+    background: #FFFFFF;  
+    border: 1px solid #005BBB;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 48px;
+    /* робимо текст у полі заповнювання */
+    font-weight: 400;
+    font-size: 16px;
+    color: #1B1D1F;
+    padding: 4px 8px;
+}
+
+.modal-form-button {
+    background: #FF6B0A;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+    /* border: 0; */
+    margin-top: 24px;
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.gus-anim {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
